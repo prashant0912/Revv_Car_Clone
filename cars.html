@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/cars.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="navbar">
+        <!-- navbar -->
+      </div>
+      <div id="filters_main_bx">
+        <div id="filters_inner_bx">
+          <div>
+            <p>FILTERS</p>
+          </div>
+          <div>
+            <p>Cars Rental in <span>******</span></p>
+          </div>
+          <div>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <div>
+              <p>Prices exclude fuel cost</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Sort by:</p>
+            </div>
+            <div>
+              <select name="" id="">
+                <option value="Popularity">Popularity</option>
+                <option value="Price:Low to High">Price:Low to High</option>
+                <option value="Price:High to Low">Price:High to Low</option>
+                <option value="">-----</option>
+                <option value="">------</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="left">
+          <span
+            ><p><b>Segment</b></p></span
+          >
+          <input type="checkbox" />
+          <label for="">Hatchback</label><br />
+          <input type="checkbox" />
+          <label for="">Sedan</label><br />
+          <input type="checkbox" />
+          <label for="">SUV</label><br />
+          <input type="checkbox" />
+          <label for="">MUV</label><br />
+
+          <!-- BRAND -->
+          <p>
+            <span><b>Brand</b></span>
+          </p>
+          <input type="checkbox" />
+          <label for="">Maruti</label><br />
+          <input type="checkbox" />
+          <label for="">Hyundai</label><br />
+          <input type="checkbox" />
+          <label for="">Mahindra</label><br />
+          <input type="checkbox" />
+          <label for="">Honda</label><br />
+          <input type="checkbox" />
+          <label for="">Toyata</label><br />
+          <input type="checkbox" />
+          <label for="">Ford</label><br />
+
+          <!-- fule type -->
+
+          <p>
+            <span><b>Fuel Type</b></span>
+          </p>
+          <input type="checkbox" />
+          <label for="">Diesel</label><br />
+          <input type="checkbox" />
+          <label for="">Petrol</label><br />
+
+          <!-- Transmission -->
+          <p>
+            <span><b>Transmission Type</b></span>
+          </p>
+          <input type="checkbox" />
+          <label for="">Automatic</label><br />
+          <input type="checkbox" />
+          <label for="">Manual</label><br />
+
+          <!-- Capacity -->
+
+          <p>
+            <span><b>Seating Capacity</b></span>
+          </p>
+          <input type="checkbox" />
+          <label for="">5 Seat</label><br />
+          <input type="checkbox" />
+          <label for="">7 Seat</label><br />
+        </div>
+        <div id="right"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let data = [
+    {
+      name: "Hyundai Creta",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+    },
+    {
+      name: "Maruti Baleno AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/baleno.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+    },
+    {
+      name: "Hyundai Santro AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvSANTRO.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+    },
+  ];
+
+  display_cars(data);
+  function display_cars(data) {
+    data.map(function (ele) {
+      let div = document.createElement("div");
+      div.setAttribute("class", "boxes126");
+      let car_name = document.createElement("h3");
+      car_name.textContent = ele.name;
+
+      let image = document.createElement("img");
+      image.setAttribute("class", "car_img126");
+      image.src = ele.url;
+
+      let small_row1 = document.createElement("div");
+      small_row1.setAttribute("class", "small_row1");
+
+      // TRANSMISSION
+
+      let transmission_div = document.createElement("div");
+      //   transmission_div.setAttribute("class", "transmission_div");
+
+      let transmission_img = document.createElement("img");
+      //   transmission_img.setAttribute("class", "transmission_img");
+      transmission_img.src =
+        "https://cdn-icons.flaticon.com/png/512/2260/premium/2260179.png?token=exp=1642530024~hmac=4a5bfce1582f23e00c879d24a008821a";
+
+      let transmission = document.createElement("p");
+      transmission.textContent = ele.transmission;
+      transmission_div.append(transmission_img, transmission);
+
+      // FUEL
+
+      let fuel_div = document.createElement("div");
+      let fuel_img = document.createElement("img");
+      fuel_img.src = "https://static.thenounproject.com/png/43344-200.png";
+
+      let fuel = document.createElement("p");
+      fuel.textContent = ele.fuel;
+
+      fuel_div.append(fuel_img, fuel);
+
+      // SEAT
+      let seat_div = document.createElement("div");
+      let seat_img = document.createElement("img");
+      seat_img.src = "https://static.thenounproject.com/png/1694451-200.png";
+
+      let seat = document.createElement("p");
+      seat.textContent = ele.seats + " " + "seats";
+
+      seat_div.append(seat_img, seat);
+
+      // PRICE ROW
+
+      small_row1.append(transmission_div, fuel_div, seat_div);
+
+      let small_row2 = document.createElement("div");
+      small_row2.setAttribute("class", "small_row2");
+
+      let price1_div = document.createElement("div");
+      let price1 = document.createElement("h4");
+      price1.textContent =
+        "₹" + " " + (Math.floor(Math.random() * (2000 - 5000 + 1)) + 5000);
+      let p1 = document.createElement("p");
+      p1.textContent = "132 kms";
+
+      let price2_div = document.createElement("div");
+      let price2 = document.createElement("h4");
+      price2.textContent =
+        "₹" + " " + (Math.floor(Math.random() * (2000 - 5000 + 1)) + 5000);
+      let p2 = document.createElement("p");
+      p2.textContent = "242 kms";
+
+      let price3_div = document.createElement("div");
+      let price3 = document.createElement("h4");
+      price3.textContent =
+        "₹" + " " + (Math.floor(Math.random() * (2000 - 5000 + 1)) + 5000);
+      let p3 = document.createElement("p");
+      p3.textContent = "440 kms";
+
+      price1_div.append(price1, p1);
+      price2_div.append(price2, p2);
+      price3_div.append(price3, p3);
+      small_row2.append(price1_div, price2_div, price3_div);
+
+      // BUTTON ROW
+
+      let small_row3 = document.createElement("div");
+      small_row3.setAttribute("class", "small_row3");
+
+      let extra_km_div = document.createElement("div");
+      let extra_km = document.createElement("p");
+      extra_km.textContent = "Extra km charge @ ₹ 8/km";
+      extra_km_div.append(extra_km);
+
+      let btn_div = document.createElement("div");
+      let book_btn = document.createElement("button");
+      book_btn.textContent = "Book";
+      book_btn.style.fontWeight = "Bold";
+      btn_div.append(book_btn);
+
+      small_row3.append(extra_km_div, btn_div);
+
+      div.append(car_name, image, small_row1, small_row2, small_row3);
+      document.querySelector("#right").append(div);
+    });
+  }
+</script>
