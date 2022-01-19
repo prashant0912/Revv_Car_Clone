@@ -35,12 +35,10 @@
               <p>Sort by:</p>
             </div>
             <div>
-              <select name="" id="">
+              <select name="" id="select_126" size="1px">
                 <option value="Popularity">Popularity</option>
                 <option value="Price:Low to High">Price:Low to High</option>
                 <option value="Price:High to Low">Price:High to Low</option>
-                <option value="">-----</option>
-                <option value="">------</option>
               </select>
             </div>
           </div>
@@ -51,20 +49,20 @@
           <span
             ><p><b>Segment</b></p></span
           >
-          <input type="checkbox" />
-          <label for="">Hatchback</label><br />
-          <input type="checkbox" />
-          <label for="">Sedan</label><br />
-          <input type="checkbox" />
-          <label for="">SUV</label><br />
-          <input type="checkbox" />
-          <label for="">MUV</label><br />
+          <input type="checkbox" id="hatchback" value="Hatchback" />
+          <label for="hatchback">Hatchback</label><br />
+          <input type="checkbox" id="sedan" value="Sedan" />
+          <label for="sedan">Sedan</label><br />
+          <input type="checkbox" id="suv" value="SUV" />
+          <label for="suv">SUV</label><br />
+          <input type="checkbox" id="muv" value="MUV" />
+          <label for="muv">MUV</label><br />
 
           <!-- BRAND -->
           <p>
             <span><b>Brand</b></span>
           </p>
-          <input type="checkbox" />
+          <input type="checkbox" id="maruti" />
           <label for="">Maruti</label><br />
           <input type="checkbox" />
           <label for="">Hyundai</label><br />
@@ -117,9 +115,11 @@
     {
       name: "Hyundai Creta",
       url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
-      transmission: "Manual",
+      transmission: "Automatic",
       fuel: "Petrol",
       seats: "5",
+      segment: "Hatchback",
+      brand: "Hyundai",
     },
     {
       name: "Maruti Baleno AT",
@@ -127,6 +127,8 @@
       transmission: "Automatic",
       fuel: "Petrol",
       seats: "5",
+      segment: "Hatchback",
+      brand: "Maruti",
     },
     {
       name: "Hyundai Santro AT",
@@ -134,8 +136,472 @@
       transmission: "Automatic",
       fuel: "Petrol",
       seats: "5",
+      segment: "Sedan",
+    },
+    {
+      name: "Hyundai Creta",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+      transmission: "Automatic",
+    },
+
+    {
+      name: "Tata Tigor",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Tigor.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "SUV",
+      brand: "Tata",
+    },
+
+    {
+      name: "Mahindra XUV300",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/RevvMahindraXUV300.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "SUV",
+      brand: "Mahindra",
+    },
+
+    {
+      name: "Maruti Alto K10",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Altok10.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Maruti Baleno",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/baleno.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "MUV",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Maruti Swift",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Hyundai Santro MT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvSANTRO.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Hyundai Creta",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Mahindra XUV",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/xuv.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "7",
+      segment: "MUV",
+      brand: "Mahindra",
+    },
+
+    {
+      name: "Tata Tiago",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Tata-Tiago4.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Tata",
+    },
+
+    {
+      name: "Hyundai Grand i10",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/grand_i10.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Maruti Swift Dzire",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/dzire.png",
+      transmission: "Automatic",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Maruti Swift AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Mahindra Marazzo",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Marazzo_white.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "7",
+      segment: "MUV",
+      brand: "Mahindra",
+    },
+
+    {
+      name: "Hyundai Verna MT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Mahindra Scorpio",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/scorpio.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "7",
+      segment: "SUV",
+      brand: "Mahindra",
+    },
+
+    {
+      name: "Mahindra KUV100",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/KUV-100.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Mahindra",
+    },
+
+    // SOLD OUT PRODUCTS -------------------------------------------------->
+    // ---------------------------------------------------------------------------->
+    // Yaha pe na BOOK ki jagah SOLD OUT aaega -------------------------------------------->
+
+    {
+      name: "Honda City",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Honda",
+    },
+
+    {
+      name: "Maruti Ertiga",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/ertiga.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "7",
+      segment: "MUV",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Maruti Celerio",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/celerio.png",
+      transmission: "Automatic",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Tata Zest (P)",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Zest.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Tata",
+    },
+
+    {
+      name: "Maruti Ciaz",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/CiazWEBPAGE.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Hyundai Elite i20",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Hyundai Verna AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Hyundai Creta AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+      transmission: "Automatic",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "MUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Maruti Ciaz AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/CiazWEBPAGE.png",
+      transmission: "Automatic",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Hyundai Venue AT",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Hyundai-Venue_For-Web.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "MUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Tata Tigor AT (P)",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Tigor.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Tata",
+    },
+
+    {
+      name: "Mahindra XUV300 (P)",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/RevvMahindraXUV300.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Mahindra",
+    },
+
+    {
+      name: "Toyota Innova Crysta",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/InnovaWEBPAGE.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "MUV",
+      brand: "Toyata",
+    },
+
+    {
+      name: "Hyundai Venue AT (D)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Honda City AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Honda",
+    },
+
+    {
+      name: "Tata Zest",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Zest.png",
+      transmission: "Manual",
+      fuel: "Diesel",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Tata",
+    },
+
+    {
+      name: "Hyundai Elite i20 AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Maruti Baleno AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/baleno.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "MUV",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Maruti Swift (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Hatchback",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Honda Amaze (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/amaze.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Honda",
+    },
+
+    {
+      name: "Maruti Brezza AT",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/brezza.png",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Honda Jazz",
+      url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/admincarImages/thumb/Honda-jazz-Web-450-X-281-px.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Honda",
+    },
+
+    {
+      name: "Hyundai Creta (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Maruti Swift Dzire (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/dzire.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Maruti",
+    },
+
+    {
+      name: "Hyundai Elite i20 (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "SUV",
+      brand: "Hyundai",
+    },
+
+    {
+      name: "Honda City (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Honda ",
+    },
+
+    {
+      name: "Hyundai Verna MT (P)",
+      url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+      transmission: "Manual",
+      fuel: "Petrol",
+      seats: "5",
+      segment: "Sedan",
+      brand: "Hyundai",
     },
   ];
+
+  document.querySelector("#hatchback").addEventListener("change", function () {
+    filters();
+  });
+
+  function filters() {
+    document.querySelector("#right").innerHTML = "";
+    let selected = document.querySelector("#hatchback").value;
+    // console.log(selected);
+
+    if (document.querySelector("#hatchback").checked == true) {
+      let category_126 = data.filter(function (ele) {
+        return ele.segment == selected;
+      });
+      display_cars(category_126);
+    } else {
+      display_cars(data);
+    }
+  }
 
   display_cars(data);
   function display_cars(data) {
@@ -197,7 +663,7 @@
       let price1_div = document.createElement("div");
       let price1 = document.createElement("h4");
       price1.textContent =
-        "₹" + " " + (Math.floor(Math.random() * (2000 - 5000 + 1)) + 5000);
+        "₹" + " " + (Math.floor(Math.random() * (1000 - 4000 + 1)) + 4000);
       let p1 = document.createElement("p");
       p1.textContent = "132 kms";
 
@@ -211,7 +677,7 @@
       let price3_div = document.createElement("div");
       let price3 = document.createElement("h4");
       price3.textContent =
-        "₹" + " " + (Math.floor(Math.random() * (2000 - 5000 + 1)) + 5000);
+        "₹" + " " + (Math.floor(Math.random() * (2000 - 6000 + 1)) + 6000);
       let p3 = document.createElement("p");
       p3.textContent = "440 kms";
 
@@ -233,6 +699,11 @@
       let btn_div = document.createElement("div");
       let book_btn = document.createElement("button");
       book_btn.textContent = "Book";
+      book_btn.addEventListener("click", function () {
+        window.location.href = "Booking.html";
+        car_details_data_send(ele);
+      });
+
       book_btn.style.fontWeight = "Bold";
       btn_div.append(book_btn);
 
@@ -241,5 +712,9 @@
       div.append(car_name, image, small_row1, small_row2, small_row3);
       document.querySelector("#right").append(div);
     });
+  }
+
+  function car_details_data_send(ele) {
+    localStorage.setItem("car_details", JSON.stringify(ele));
   }
 </script>
