@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    data = [
+
+        {
+            name: "Hyundai Creta",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            transmission: "Automatic",
+            price: 3569
+        },
+
+        {
+            name: "Tata Tigor",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Tigor.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "SUV",
+            brand: "Tata",
+            price: 4549
+        },
+
+        {
+            name: "Mahindra XUV300",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/RevvMahindraXUV300.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "SUV",
+            brand: "Mahindra",
+            price: 5567
+        },
+
+        {
+            name: "Maruti Alto K10",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Altok10.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Maruti",
+            price: 3459
+        },
+
+        {
+            name: "Maruti Baleno",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/baleno.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "MUV",
+            brand: "Maruti",
+            price: 5568
+        },
+
+        {
+            name: "Maruti Swift",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Maruti",
+            price: 3548
+        },
+
+        {
+            name: "Hyundai Santro MT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvSANTRO.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Hyundai",
+            price: 4569
+        },
+
+        {
+            name: "Hyundai Creta",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            price: 5899
+        },
+
+        {
+            name: "Mahindra XUV",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/xuv.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "7",
+            segment: "MUV",
+            brand: "Mahindra",
+            price: 7545
+        },
+
+        {
+            name: "Tata Tiago",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Tata-Tiago4.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Tata",
+            price: 3563
+        },
+
+        {
+            name: "Hyundai Grand i10",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/grand_i10.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Hyundai",
+            price: 4657
+        },
+
+        {
+            name: "Maruti Swift Dzire",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/dzire.png",
+            transmission: "Automatic",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Maruti",
+            price: 4560
+        },
+
+        {
+            name: "Maruti Swift AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Maruti",
+            price: 3289
+        },
+
+        {
+            name: "Mahindra Marazzo",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/Marazzo_white.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "7",
+            segment: "MUV",
+            brand: "Mahindra",
+            price: 5529
+        },
+
+        {
+            name: "Hyundai Verna MT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Hyundai",
+            price: 3946
+        },
+
+        {
+            name: "Mahindra Scorpio",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/scorpio.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "7",
+            segment: "SUV",
+            brand: "Mahindra",
+            price: 6163
+        },
+
+        {
+            name: "Mahindra KUV100",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/KUV-100.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Mahindra",
+            price: 3945
+        },
+
+
+        // SOLD OUT PRODUCTS -------------------------------------------------->
+        // ---------------------------------------------------------------------------->
+        // Yaha pe na BOOK ki jagah SOLD OUT aaega -------------------------------------------->
+
+        {
+            name: "Honda City",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Honda",
+            price: 4056
+        },
+
+        {
+            name: "Maruti Ertiga",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/ertiga.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "7",
+            segment: "MUV",
+            brand: "Maruti",
+            price: 6216
+        },
+
+        {
+            name: "Maruti Celerio",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/celerio.png",
+            transmission: "Automatic",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Maruti",
+            price: 3949
+        },
+
+        {
+            name: "Tata Zest (P)",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Zest.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Tata",
+            price: 4926
+        },
+
+        {
+            name: "Maruti Ciaz",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/CiazWEBPAGE.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Maruti",
+            price: 3592
+        },
+
+        {
+            name: "Hyundai Elite i20",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            price: 6239
+        },
+
+        
+        {
+            name: "Hyundai Verna AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Hyundai",
+            price: 3987
+        },
+
+        {
+            name: "Hyundai Creta AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+            transmission: "Automatic",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "MUV",
+            brand: "Hyundai",
+            price: 4276
+        },
+
+        {
+            name: "Maruti Ciaz AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/CiazWEBPAGE.png",
+            transmission: "Automatic",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Maruti",
+            price: 4922
+        },
+
+        {
+            name: "Hyundai Venue AT",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Hyundai-Venue_For-Web.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "MUV",
+            brand: "Hyundai",
+            price: 5938
+        },
+
+        {
+            name: "Tata Tigor AT (P)",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Tigor.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Tata",
+            price: 5239
+        },
+
+        {
+            name: "Mahindra XUV300 (P)",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/RevvMahindraXUV300.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Mahindra",
+            price: 3899
+        },
+
+        {
+            name: "Toyota Innova Crysta",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/InnovaWEBPAGE.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "7",
+            segment: "MUV",
+            brand: "Toyata",
+            price: 7322
+        },
+
+        {
+            name: "Hyundai Venue AT (D)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Hyundai",
+            price: 4234
+        },
+
+        {
+            name: "Honda City AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Honda",
+            price: 5219
+        },
+
+        {
+            name: "Tata Zest",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/carImages/white_images/Tata-Zest.png",
+            transmission: "Manual",
+            fuel: "Diesel",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Tata",
+            price: 4021
+        },
+
+        {
+            name: "Hyundai Elite i20 AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            price: 5360
+        },
+
+        {
+            name: "Maruti Baleno AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/baleno.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "MUV",
+            brand: "Maruti",
+            price: 6213
+        },
+
+        {
+            name: "Maruti Swift (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/swift.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Hatchback",
+            brand: "Maruti",
+            price: 5213
+        },
+        
+        {
+            name: "Honda Amaze (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/amaze.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Honda",
+            price: 4219
+        },
+
+        {
+            name: "Maruti Brezza AT",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/brezza.png",
+            transmission: "Automatic",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Maruti",
+            price: 5489
+        },
+
+        {
+            name: "Honda Jazz",
+            url: "https://revvselfdrivecar.s3-us-west-2.amazonaws.com/admincarImages/thumb/Honda-jazz-Web-450-X-281-px.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Honda",
+            price: 6291 
+        },
+
+        {
+            name: "Hyundai Creta (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/thumb/Creta.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            price: 5213
+        },
+
+        {
+            name: "Maruti Swift Dzire (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/dzire.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Maruti",
+            price: 4312
+        },
+
+        {
+            name: "Hyundai Elite i20 (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/i20.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "SUV",
+            brand: "Hyundai",
+            price:  6213
+        },
+
+        {
+            name: "Honda City (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/honda+city.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Honda ",
+            price:  5238
+        },
+
+        {
+            name: "Hyundai Verna MT (P)",
+            url: "https://s3-us-west-2.amazonaws.com/revvselfdrivecar/carImages/white_images/RevvWebsiteVERNA+.png",
+            transmission: "Manual",
+            fuel: "Petrol",
+            seats: "5",
+            segment: "Sedan",
+            brand: "Hyundai",
+            price: 3971 
+        },
+
+
+
+
+    ]
+
+
+</script>
